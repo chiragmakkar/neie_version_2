@@ -1,0 +1,24 @@
+{
+  "name": "neie_version_2",
+  "version": "2.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiragmakkar/neie_version_2.git"
+  },
+  "author": "pietraman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiragmakkar/neie_version_2/issues"
+  },
+  "homepage": "https://github.com/chiragmakkar/neie_version_2#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1"
+  }
+}
