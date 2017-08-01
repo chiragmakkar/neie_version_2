@@ -30,9 +30,22 @@ var internProfile = new Schema({
     "iEmail_verified": Boolean,
     "iPhone_verified": Boolean,
     "iOTP_Mobile": Number,
-    "iEmailCode": String
-
-
+    "iEmailCode": String,
+    "iIntroduction": String,
+    "iFatherName": String,
+    "iWebsite": String,
+    "iLinkedIn": String,
+    "iFacebook": String,
+    "iSkills":String,
+    "iExperience": [Schema.Types.Mixed],
+    "iEducation": {
+        "university": String,
+        "course": String,
+        "fromMonth": String,
+        "fromYear": String,
+        "toMonth": String,
+        "toYear": String
+    }
 });
 
 //post a project
@@ -40,13 +53,34 @@ var postAProject = new Schema({
     "typeOfWork": String,
     "describeYourJob": String,
     "projectName": String,
-    "skillInDomain": String,
-    "skillNeeded": String,
+    "skillsrequired": [Schema.Types.Mixed],
     "describeYourProject": String,
     "cost": String,
     "duration": String
 });
 
+//Live Expert Advice Schema for Chat
+var liveExpert = new Schema({
+    "chooseDomain": String,
+    "yourQuestion": String,
+    "describeChatQuery": String,
+    "describeExpectation": String
+
+});
+//Raise a Query Schema 
+var query = new Schema({
+    "queryDomain": String,
+    "describeDiscussionQuery": String,
+    "discussionExpectation": String
+});
+//Review Intern Schema
+var reviewIntern = new Schema({
+    "rating": Number,
+    "review": String
+});
 module.exports = mongoose.model('entreProfile', entreProfile);
 module.exports = mongoose.model('internProfile', internProfile);
 module.exports = mongoose.model('postAProject', postAProject);
+module.exports = mongoose.model('expertAdvice', expertAdvice);
+module.exports = mongoose.model('query', query);
+module.exports = mongoose.model('reviewIntern', reviewIntern);
