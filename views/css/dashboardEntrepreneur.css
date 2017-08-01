@@ -1,0 +1,145 @@
+/*SideBar*/
+#sidebar{
+	display:inline-block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 304px;
+	background-color: rgba(7,71,166,1);
+	font-size: 18px;
+	color: rgba(255,255,255,1)!important;
+	z-index: 0;
+}
+/*Main View*/
+#main-panel{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 304px;
+	width: calc(99% - 304px);
+	min-height: 100%;
+	background-color: rgba(255,255,255,1);
+	z-index: 0;
+}
+/*sub-main-panel*/
+#main-view{
+	
+}
+/*left-sub-sidebar*/
+#left-sub-sidebar{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 64px;
+}
+/*website name and logo*/
+#brand{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 304px;
+	height: 70px;
+}
+#brand-name{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 64px;
+	text-align: center;
+	width: 240px;
+	font-size: 30px;
+	padding: 8px 12px;
+}
+/*left part of sidebar*/
+.left-sub{
+	display: inline-block;
+	position: absolute;
+	top: 70px;
+	left: 0px;
+	padding: 27px 0px;
+	height: 100%;
+}
+/*right part of sidebar*/
+.right-sub{
+	display: inline-block;
+	position: absolute;
+	top: 70px;
+	left: 64px;
+	width: 240px;
+	height: 100%;
+	padding: 20px 8px;
+}
+/*left sub sidebar a tag*/
+#left-sub-sidebar a{
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+	cursor: pointer;
+}
+/*right sub sidebar ul tag*/
+.right-sub ul{
+	list-style-type: none;
+	height: 100%;
+    width: 100%;
+    padding: 8px 12px;
+	font-size: 16px;
+}
+/*right sub sidebar li tag*/
+.right-sub li{
+	text-align: left;
+	font-size: 18px;
+	padding: 12px 12px;
+}
+/*right sub sidebar li fontawsome*/
+.right-sub li i{
+	font-size: 20px;
+	padding: 0 10px;
+}
+/*right sub sidebar li hover*/
+.right-sub li:hover{
+	background-color: rgba(8,53,121,1);
+}
+/*left sub sidebar ul tag*/
+.left-sub ul{
+	list-style-type: none;
+	padding-left: 12px;
+	font-size: 25px;
+}
+/*left sub sidebar li tag*/
+.left-sub li{
+	font-size: 25px;
+	text-align: ;
+	padding: 0px 8px;
+}
+/*left sub sidebar li hover*/
+.left-sub li:hover{
+	background-color: rgba(8,53,121,1);
+	width: 40px;
+	height: 40px;
+	border-radius: 49%;
+	box-shadow: 0px 0px 8px rgba(255,255,255,1);
+}
+/*ul list for both sub sidebar*/
+.list{
+}
+/*user profile icon*/
+.user{
+	border: 2px solid rgba(255,255,255,1);
+	width: 40px;
+	height: 40px;
+	border-radius: 49%;
+}
+/*profile, search back button*/
+.btn-back{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border-radius: 50%;
+	border: 1px solid rgba(66,82,110,1);
+	color: rgba(66,82,110,1);
+	height: 40px;
+	width: 40px;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="../css/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../css/signUp.css" rel="stylesheet">
+	</head>
+	<body>
+<!--		Sign Up Main Div Body-->
+		<div class="signup-back">
+<!--			Left Div-->
+			<div class="signup-left" ng-switch on="signup_options">
+				
+				<div class="signup-left-tag" ng-switch-default>
+					Choose yourself!
+				</div>
+<!--				Signup Entrepreneur Form-->
+				<div class="signup-entrepreneur-form" ng-switch-when="signup_entre_view">
+					<form class="form-horizontal">
+						
+						<div class="row form-group">
+							<div class="col-md-6">
+								<div class="row">
+									<label class="col-md-4 control-label">First Name</label>
+									<div class="col-md-8">
+										<input class="form-control" type="text" placeholder="John">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<label class="col-md-4 control-label">Last Name</label>
+									<div class="col-md-8">
+										<input class="form-control" type="text" placeholder="Smith">
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						
+						<div class="row form-group">
+							<label class="col-md-2 control-label">Organization</label>
+							<div class="col-md-10">
+								<input class="form-control" type="text" placeholder="Neiex Inc.">
+							</div>
+						</div>
+						<br>
+						
+						<div class="row form-group">
+							<label class="col-md-2 control-label">E-mail</label>
+							<div class="col-md-10">
+								<input class="form-control" type="text" placeholder="johnsmith@gmail.com">
+							</div>
+						</div>
+						<br>
+						
+						<div class="row form-group">
+							<label class="col-md-2 control-label">Website</label>
+							<div class="col-md-10">
+								<input class="form-control" type="text" placeholder="johnsmith.com">
+							</div>
+						</div>
+						<br>
+						
+					</form>
+				</div>
+			</div>
+<!--			Right Div-->
+			<div class="signup-right">
+<!--				Right list-->
+				<div class="signup-right-list">
+					<ul>
+						<li><button class="btn" type="button" ng-click="signup_entre();">Entrepreneur</button></li>
+						<br>
+						<li><button class="btn" type="button">Intern</button></li>
+						<br>
+						<li><button class="btn" type="button">Expert</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

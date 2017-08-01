@@ -1,0 +1,128 @@
+/*Main page*/
+
+#profileEntreMain {
+	display: inline-block;
+	position: fixed;
+	top: 0px;
+	left: 64px;
+	height: 100%;
+	width: calc(100% - 304px);
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(66, 82, 110, 1);
+}
+
+/*left bar*/
+
+#profileEntreLeftBar {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 240px;
+	background-color: rgba(244, 245, 247, 1);
+}
+#profileEntreRightBar {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 240px;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+
+/*ul list*/
+
+#profileEntreLeftBarList ul {
+	padding: 8px 12px;
+}
+#profileEntreLeftBarList ul li {
+	list-style-type: none;
+	height: 100%;
+	width: 100%;
+	padding: 8px 12px;
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#profileEntreLeftBarList ul li:hover {
+	background-color: rgba(9, 30, 66, 0.14);
+}
+#profileEntreLeftBarList a {
+	text-decoration: none !important;
+	color: rgba(66, 82, 110, 1);
+	cursor: pointer;
+}
+
+/*user image and user name*/
+
+#profileEntreUserInfo {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+#profileEntreUserImage {
+	display: block;
+	height: 100px;
+	width: 120px;
+	background-color: red;
+	padding: 0px;
+	margin: 0px;
+	background-image: url(../images/user.png);
+	background-size: cover;
+	border: 5px solid rgba(66, 82, 110, 1);
+	border-radius: 5px;
+	position: absolute;
+	top: 0px;
+	left: 60px;
+}
+#profileEntreUserName {
+	display: block;
+	text-align: center;
+	height: 40px;
+	width: 240px;
+	margin-right: 5px;
+	padding: 8px 12px;
+	font-size: 18px;
+	font-weight: 400;
+	position: absolute;
+	top: 120px;
+	left: 0px;
+}
+
+/*left bar list*/
+
+#profileEntreLeftBarList {
+	display: inline-block;
+	position: absolute;
+	top: 210px;
+	left: 0px;
+	width: 240px;
+	height: 100%;
+}
+.list-item {
+	text-align: center;
+	padding: 0px 12px;
+}
+.list-item-icon {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	text-align: right;
+	font-size: 20px;
+}
+.list-item-font {
+	display: inline-block;
+	height: 30px;
+	width: 120px;
+	text-align: left;
+	font-size: 16px;
+}
+
+/*user settings tabs*/
+
+.nav-tabs a {
+	color: rgba(66, 82, 110, 1)!important;
+	cursor: pointer;
+}

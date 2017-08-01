@@ -1,0 +1,75 @@
+/*Signup main div body*/
+.signup-back{
+	display: inline-block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,121,191,1);
+	z-index: 5;
+}
+/*Signup left*/
+.signup-left{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 100%;
+}
+/*Signup left tag*/
+.signup-left-tag{
+	display: inline-block;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	font-size: 90px;
+	text-align: center;
+	font-family: "Herculanum", sans-serif;
+	color: rgba(255,255,255,1);
+}
+/*Signup right*/
+.signup-right{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30%;
+	height: 100%;
+}
+/*Signup right list div*/
+.signup-right-list{
+	display: inline-block;
+	position: absolute;
+	top: 30%;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+}
+/*Signup right list*/
+.signup-right ul{
+	list-style-type: none;
+	font-size: 25px; 
+}
+
+.signup-right button{
+	font-size: 25px !important;
+	width: 100%;
+	font-family: "Herculanum", sans-serif;
+	color: rgba(255,255,255,1) !important;
+	background-color: rgba(7,71,166,1) !important;
+	border: 1px solid rgba(7,71,166,1) !important;
+	border-radius: 20px;
+}
+/*Signup Entrepreneur Form*/
+.signup-entrepreneur-form{
+	display: inline-block;
+	position: absolute;
+	top: 10%;
+	left: 0;
+	width: 100%;
+	font-size: 16px;
+	color: rgba(255,255,255,1);
+}

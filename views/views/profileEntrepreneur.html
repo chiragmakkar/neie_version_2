@@ -1,0 +1,205 @@
+<div id="profileEntreMain">
+	<!--	Left Bar-->
+	<div id="profileEntreLeftBar" class="container-fluid">
+		<!--		Back button-->
+		<button type="button" class="btn btn-default btn-md btn-back" ng-click="bodyClick();"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+		<!--		User Photo and Name-->
+		<div id="profileEntreUserInfo">
+			<div id="profileEntreUserImage">
+			</div>
+			<div id="profileEntreUserName">
+				<p>Piet Raman</p>
+			</div>
+		</div>
+		<!--		Options-->
+		<div id="profileEntreLeftBarList">
+			<ul>
+				<a>
+					<li>
+						<div class="list-item">
+							<div class="list-item-icon">
+								<i class="fa fa-id-card-o" aria-hidden="true"></i>
+							</div>
+							<div class="list-item-font">Overview</div>
+						</div>
+					</li>
+				</a>
+				<a>
+					<li>
+						<div class="list-item" ng-click="userSettings();">
+							<div class="list-item-icon">
+								<i class="fa fa-cogs" aria-hidden="true"></i>
+							</div>
+							<div class="list-item-font">Settings</div>
+						</div>
+					</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+
+	<!--	Right Bar-->
+	<div id="profileEntreRightBar">
+		<!--		User Settings-->
+		<div class="user-settings container-fluid" ng-switch on="userProfileOptions">
+			<!--			UserSettingsDiv-->
+			<div id="userSettingsDiv" ng-switch-when="settings" ng-switch on="userSettingsOptions">
+				<!--				User Settings Tabs-->
+				<br>
+				<ul class="nav nav-tabs">
+					<li role="presentation" ng-click="profileSettings();"><a>Profile Settings</a></li>
+					<li role="presentation" ng-click="accountSettings();"><a>Account Settings</a></li>
+				</ul>
+			</div>
+			<!--			User settings div ends -->
+			<div ng-switch on="userSettingsOptions">
+				<!--				Profile Settings-->
+				<div ng-switch-when="profile">
+					<div>
+						<br>
+						<form name="entreProfile" novalidate class="form-horizontal form-group">
+							<h2>Personal Details</h2>
+							<hr>
+							<br>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-1">
+									<div class="row">
+										<label class="col-md-3 control-label">First Name</label>
+										<div class="col-md-8">
+											<input name="entreProfileFname" class="form-control" type="text" placeholder="John">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="row">
+										<label class="col-md-3 control-label">Last Name</label>
+										<div class="col-md-8">
+											<input name="entreProfileLname" class="form-control" type="text" placeholder="Smith">
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Organization</label>
+								<div class="col-md-4">
+									<input name="entreProfileOrg" class="form-control" type="text" placeholder="JohnSmith Inc.">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Mobile</label>
+								<div class="col-md-4">
+									<input name="entreProfilePhone" class="form-control" type="text" placeholder="9999999999">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Website</label>
+								<div class="col-md-4">
+									<input name="entreProfileWeb" class="form-control" type="text" placeholder="johnsmith.com">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">E-mail</label>
+								<div class="col-md-4">
+									<input name="entreProfileEmail" class="form-control" type="text" placeholder="johnsmith@gmail.com">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Address</label>
+								<div class="col-md-7">
+									<input name="entreProfileAdd" class="form-control" type="text" placeholder="51st Street, Park Avenue, C.A.">
+								</div>
+							</div>
+							<br>
+							<h2>About Yourself</h2>
+							<hr>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">About us</label>
+								<div class="col-md-7">
+									<textarea name="entreProfileAbout" class="form-control" placeholder="Tell us!" rows="7" style="resize: none;"></textarea>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Vision</label>
+								<div class="col-md-7">
+									<textarea name="entreProfileVision" class="form-control" placeholder="It's us!" rows="7" style="resize: none;"></textarea>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Founded on</label>
+								<div class="col-md-4">
+									<input name="entreProfileFounded" class="form-control" type="text" placeholder="Jan 1, 17">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Industry Type</label>
+								<div class="col-md-4">
+									<input name="entreProfileIndustry" class="form-control" type="text" placeholder="IT">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2 col-md-offset-4">
+									<button class="btn btn-primary btn-md btn-block">Save</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!--				Profile settings ends-->
+
+				<!--				Account Settings-->
+				<div ng-switch-when="account">
+					<div id="account-settings-view">
+						<br>
+						<h2>Change Passcode</h2>
+						<hr>
+						<br>
+						<form novalidate class="form-horizontal">
+							<div class="form-group">
+								<label class="col-md-2 col-md-offset-1 control-label">Old Passcode</label>
+								<div class="col-md-4">
+									<!--								Name to be given-->
+									<input class="form-control" type="password" placeholder="Old Passcode">
+								</div>
+							</div>
+							<br>
+							<div class="form-group">
+								<label class="col-md-2 col-md-offset-1 control-label">New Passcode</label>
+								<div class="col-md-4">
+									<!--								Name to be given-->
+									<input class="form-control" type="password" placeholder="New Passcode">
+								</div>
+							</div>
+							<br>
+							<div class="form-group">
+								<label class="col-md-2 col-md-offset-1 control-label">Confirm Passcode</label>
+								<div class="col-md-4">
+									<!--								Name to be given-->
+									<input class="form-control" type="password" placeholder="Confirm Passcode">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2 col-md-offset-4">
+									<button class="btn btn-block btn-primary" type="button">Change Password</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!--				account settings ends-->
+			</div>
+		</div>
+		<!--		User settings ends-->
+	</div>
+	<!--	Right bar ends-->
+</div>
