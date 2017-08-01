@@ -1,0 +1,104 @@
+<!doctype html>
+<html ng-app="Neiex">
+
+<head>
+	<title>NEIEX</title>
+	<link href="css/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+	<!--		Index page css-->
+	<link href="css/dashboardEntrepreneur.css" rel="stylesheet">
+	<!--		Search page css-->
+	<link href="css/search.css" rel="stylesheet">
+	<!--		Profile page css-->
+	<link href="css/profileEntrepreneur.css" rel="stylesheet">
+	<!--	Post Project-->
+	<link href="css/postProject.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--		Sidebar-->
+	<div id="sidebar">
+		<!--			Left Sub-sidebar-->
+		<div id="left-sub-sidebar">
+			<!--				Brand tag-->
+			<div id="brand" class="container-fluid">
+				<div id="brand-name">
+					<p>Entx</p>
+				</div>
+			</div>
+			<!--				Left part of sub sidebar-->
+			<div class="left-sub">
+				<div class="list">
+					<ul>
+						<a href="#!/profile">
+							<li class="user">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</li>
+						</a>
+						<br>
+						<a href="#!/search">
+							<li>
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+			<!--				Right part of sub sidebar-->
+			<div class="right-sub">
+				<div class="list">
+					<ul>
+						<a href="#!/postProject">
+							<li>
+								<i class="fa fa-leaf" aria-hidden="true"></i> Post Project
+							</li>
+						</a>
+						<a>
+							<li>
+								<i class="fa fa-list" aria-hidden="true"></i> My Projects
+							</li>
+						</a>
+						<a>
+							<li>
+								<i class="fa fa-map-marker" aria-hidden="true"></i> Find Intern
+							</li>
+						</a>
+						<a>
+							<li>
+								<i class="fa fa-check" aria-hidden="true"></i> Review Intern
+							</li>
+						</a>
+						<a>
+							<li>
+								<i class="fa fa-user" aria-hidden="true"></i> Live Expert
+							</li>
+						</a>
+						<a>
+							<li>
+								<i class="fa fa-arrow-up" aria-hidden="true"></i> Raise Query
+							</li>
+						</a>
+						<a>
+							<li>
+								<i class="fa fa-list" aria-hidden="true"></i> My Queries
+							</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--			Left Sub-sidebar-->
+	</div>
+	<!--		Sidebar Ends-->
+	<div id="main-panel">
+		<div id="main-view" class="container-fluid" ng-view>
+
+		</div>
+	</div>
+</body>
+
+<script src="js/angular-1.6.4/angular.min.js"></script>
+<script src="js/angular-1.6.4/angular-route.min.js"></script>
+<script src="js/dashboardEntrepreneur.js"></script>
+
+</html>
