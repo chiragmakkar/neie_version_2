@@ -3,6 +3,7 @@ var schema = mongoose.Schema;
 
 //Entrepenuer Profile,prefix e represents entrepenuer
 var entreProfile = new Schema({
+    "type":String,
     "eFirstName": String,
     "eLastName": String,
     "eEmail": String,
