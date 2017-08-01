@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
-
+var mongo = require('./models/mongodb')
 router.get('/', function(req, res, next) {
   console.log('You are on the homepage');
   res.send('You are on the homepage');
 });
 
 router.get('/register',function(req, res){
+
   console.log('You are on the register page');
   res.send('You are on the register page');
 });

@@ -3,6 +3,7 @@ var schema = mongoose.Schema;
 
 
 var internProfile = new Schema({
+    "type":String,
     "iFirstName": String,
     "iLastName": String,
     "iEmail": String,
