@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://admin:admin@ds129053.mlab.com:29053/neie');
 mongoose.connection.once('connected', function() {

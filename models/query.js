@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-var schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
 var query = new Schema({
     "queryDomain": String,
