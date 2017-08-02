@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 
-var routes = require('./routes/index');
+var routes = require('./routes/index.js').router;
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({

@@ -1,9 +1,10 @@
-module.exports = function(app, mon) {
+module.exports = function(router, mongo) {
+var email = require('../routes/index.js');
 
     //Post A Project Form API
-    app.post('/post-a-project', function(req, res) {
-
-        var project = new postAProject({
+    router.post('/post-a-project', function(req, res) {
+        var project = new mongo.postAProject({
+            "userEmail": email.email,
             "typeOfWork": req.body.postProTypeWork,
             "describeYourJob": req.body.postProDescJob,
             "projectName": req.body.postProjectName,
@@ -23,9 +24,10 @@ module.exports = function(app, mon) {
     });
 
     //Live Expert or Chat 
-    app.post('/live-expert', function(req, res) {
+    router.post('/live-expert', function(req, res) {
 
-        var expert = new liveExpert({
+        var expert = new mongo.liveExpert({
+            "userEmail": email.email,
             "chooseDomain": req.body.livExpDomain,
             "yourQuestion": req.body.livExpQues,
             "describeChatQuery": req.body.livExpDescQuery,
@@ -43,9 +45,10 @@ module.exports = function(app, mon) {
     });
 
     //Raise a Query or Disscussion Form 
-    app.post('/raise-a-query', function(req, res) {
+    router.post('/raise-a-query', function(req, res) {
 
-        var raiseAQuery = new query({
+        var raiseAQuery = new mongo.query({
+            "userEmail": email.email,
             "queryDomain": req.body.raQryDomain,
             "describeDiscussionQuery": req.body.raQryDescQry,
             "discussionExpectation": req.body.raQryExpect
@@ -62,9 +65,10 @@ module.exports = function(app, mon) {
     });
 
     //Rate The Intern form
-    app.post('/rate-the-intern', function(req, res) {
+    router.post('/rate-the-intern', function(req, res) {
 
-        var rateTheIntern = new reviewIntern({
+        var rateTheIntern = new mongo.reviewIntern({
+            "userEmail": email.email,
             "rating": req.body.revIntrRate,
             "review": req.body.revIntrReview
         });

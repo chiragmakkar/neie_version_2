@@ -1,4 +1,5 @@
 var express = require('express');
+var app = express();
 var router = express.Router();
 var mongo = require('../models/mongodb.js');
 var bcrypt = require('bcrypt');
@@ -7,6 +8,8 @@ var Schema = mongoose.Schema;
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 var config = require('./config.js');
+var userEmail;
+
 
 router.get('/', function(req, res, next) {
   console.log('You are on the homepage');
@@ -131,9 +134,11 @@ router.post('/login',function(req, res){
           }
           else if(result){
             console.log("login successful"+intern);
-            var token = jwt.sign(filteredUser, config["secret"], {
+            var token = jwt.sign(intern, config["secret"], {
 					     expiresIn: 86400 // expires in 24 hours
-				    });
+            });
+            console.log(intern.iEmail);
+            //userEmail = intern.iEmail;
 				    res.json({
 					       success: true,
 					       message: 'Authenticated',
@@ -163,7 +168,9 @@ router.post('/login',function(req, res){
             console.log("login successful"+entre);
             var token = jwt.sign(entre, config["secret"], {
 					     expiresIn: 86400 // expires in 24 hours
-				    });
+            });
+            //console.log(entre.eEmail);
+            //userEmail = entre.eEmail;
 				    res.json({
 					       success: true,
 					       message: 'Authenticated',
@@ -181,6 +188,45 @@ router.post('/login',function(req, res){
   
 });
 
+// ---------------------------------------------------------
+// route middleware to authenticate and check token
+// ---------------------------------------------------------
+router.use(function(req, res, next) {
+
+	// check header or url parameters or post parameters for token
+	var token = req.body.token || req.param('token') || req.headers['x-access-token'];
+ 
+	// decode token
+	if (token) {
+
+		// verifies secret and checks exp
+		jwt.verify(token, config["secret"], function(err, decoded) {			
+			if (err) {
+				return res.json({ success: false, message: 'Failed to authenticate token.' });		
+			} else {
+				// if everything is good, save to request for use in other routes
+        req.decoded = decoded;
+        userEmail = decoded['_doc'].eEmail;
+        module.exports.email = userEmail;
+				next();
+      }  
+		});
+	} else {
+
+		// if there is no token
+		// return an error
+		return res.status(403).send({ 
+			success: false, 
+			message: 'No token provided.'
+		});
+		
+	}
+	
+});
+
+var forms = require('../Modules/forms.js')(router, mongo);
+
+
 router.get('/logout', function(req, res){
   console.log('You are on the logout page');
   res.send('You are on the logout page');
@@ -191,4 +237,8 @@ router.get('/user', function(req, res, next) {
   res.send('You are on the user page');
 });
 
-module.exports = router;
+module.exports.router = router;
+//  = {
+//     'router' : router ,
+//     'userEmail' : userEmail
+//   }  

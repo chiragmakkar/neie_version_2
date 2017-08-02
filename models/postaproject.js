@@ -2,6 +2,7 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 
 var postAProject = new Schema({
+    "userEmail": String,
     "typeOfWork": String,
     "describeYourJob": String,
     "projectName": String,
