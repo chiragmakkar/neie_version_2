@@ -7,9 +7,77 @@
 		<div class="row">
 			<label class="col-md-2 control-label">Type of Work</label>
 			<div class="col-md-8">
-				<input class="form-control">
+				<select name="postProTypeWork" class="form-control">
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+				</select>
 			</div>
 		</div>
-
+		<br>
+		<div class="row">
+			<label class="col-md-2 control-label">Project Title</label>
+			<div class="col-md-8">
+				<input name="postProProjectName" class="form-control" type="text">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<label class="col-md-2 control-label">Describe Job</label>
+			<div class="col-md-8">
+				<textarea name="postProDescJob" class="form-control" rows="5" style="resize: none;"></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<label class="col-md-2 control-label">Skills Required</label>
+			<div class="col-md-8">
+				<select name="postProSkill" class="form-control" multiple style="height: 150px;">
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+					<option>Its me</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-9 col-md-offset-1 bg-info" style="font-size: 17px; font-style: italic; text-align:center;">To select multiple options select while pressing <strong>Ctrl</strong> in Windows/ <strong>Command</strong> in Mac.</div>
+		</div>
+		<br>
+		<h2>Cost & Duration</h2>
+		<hr>
+		<br>
+		<div class="row">
+			<label class="col-md-2 control-label">Cost/Stipend</label>
+			<div class="col-md-3">
+				<div class="input-group">
+					<div class="input-group-addon">&#x20B9</div>
+					<input name="postProCost" class="form-control">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<label class="col-md-2 control-label">Duration</label>
+			<div class="col-md-3">
+				<div class="input-group">
+					<input name="postProDuration" class="form-control">
+					<div class="input-group-addon">months</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-3 col-md-offset-4">
+				<button class="btn btn-block btn-primary" type="button">Submit</button>
+			</div>
+		</div>
 	</form>
 </div>
