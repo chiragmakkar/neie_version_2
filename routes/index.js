@@ -1,5 +1,4 @@
 var express = require('express');
-var app = express();
 var router = express.Router();
 var mongo = require('../models/mongodb.js');
 var bcrypt = require('bcrypt');
