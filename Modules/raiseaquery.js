@@ -1,4 +1,4 @@
-module.exports = function(app, mon) {
+module.exports = function(router, mon) {
 var email = require('../routes/index.js');
     //Raise a Query or Disscussion Form 
     router.post('/raise-a-query', function(req, res) {

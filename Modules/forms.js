@@ -1,8 +1,8 @@
 module.exports = function(router, mongo) {
 
-    var postaprojectForm = require('./postaproject.js')(app, mon);
-    var raiseaqueryForm = require('./raiseaquery.js')(app, mon);
-    var liveexpertForm = require('./liveexpert.js')(app, mon);
-    var ratetheinternForm = require('./ratetheintern')(app, mon);
+    var postaprojectForm = require('./postaproject.js')(router, mongo);
+    var raiseaqueryForm = require('./raiseaquery.js')(router, mongo);
+    var liveexpertForm = require('./liveexpert.js')(router, mongo);
+    var ratetheinternForm = require('./ratetheintern')(router, mongo);
 
 }

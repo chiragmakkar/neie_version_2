@@ -10,10 +10,15 @@ var config = require('./config.js');
 var userEmail;
 
 
-router.get('/', function(req, res, next) {
-  console.log('You are on the homepage');
-  res.send('You are on the homepage');
-});
+
+//get API'S
+   var getApis = require('../get.js')(router,mongo);
+
+
+
+
+
+//
 router.post('/register',function(req, res){
   console.log('You are on the register page');
   if(req.body.password === req.body.confirmPassword)  
@@ -189,7 +194,7 @@ router.post('/login',function(req, res){
 
 router.use(function(req, res, next) {
 
-	var token = req.body.token || req.param('token') || req.headers['x-access-token'];
+	var token = req.body.token || req.params.token || req.headers['x-access-token'];
  
 	if (token) {
 
