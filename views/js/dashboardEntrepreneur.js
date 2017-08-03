@@ -1,5 +1,6 @@
 var app = angular.module("Neiex", ['ngRoute']);
 app.config(function ($routeProvider) {
+
 	//Search Page
 	$routeProvider.when('/search', {
 		templateUrl: "views/search.html",
@@ -28,11 +29,6 @@ app.config(function ($routeProvider) {
 	//My Projects
 	$routeProvider.when('/myProjects', {
 		templateUrl: "views/myProjects.html"
-	});
-	//Home Page
-	$routeProvider.when('/homePage', {
-		templateUrl: "views/homePage.html",
-		controller: 'HomePageCtrl'
 	});
 	//Profile Page
 	$routeProvider.when('/profile', {
@@ -75,11 +71,4 @@ app.controller('ProfileCtrl', function ($location, $scope) {
 	$scope.accountSettings = function () {
 		$scope.userSettingsOptions = 'account';
 	};
-});
-//Controller for Home Page
-app.controller('HomePageCtrl', function ($location, $scope) {
-	//Temporary Back Button Function
-	$scope.tempDashBack = function () {
-		$location.path('/blank');
-	}
 });
