@@ -1,6 +1,7 @@
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 /*main search div*/
 
-#search {
+#findIntrSearch {
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -14,7 +15,7 @@
 
 /*body div*/
 
-#search-body {
+#findIntrSearchBody {
 	display: inline-block;
 	position: absolute;
 	top: 0px;
@@ -25,7 +26,7 @@
 
 /*main search div*/
 
-.main-search {
+.findIntrMainSearch {
 	display: inline-block;
 	position: fixed;
 	top: 100px;
@@ -35,4 +36,23 @@
 	background-color: rgba(255, 255, 255, 1);
 	box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.3);
 	font-size: 30px;
+}
+.findIntrArrow {
+	position: absolute;
+	left: 55%;
+	top: 25%;
+	z-index: 3;
+	height: 300;
+	width: 400;
+}
+.findIntrText {
+	float: left;
+	position: absolute;
+	left: 32%;
+	top: 50%;
+	color: rgba(66, 82, 110, 1);
+	font-family: 'Caveat', cursive;
+	height: 300;
+	width: 400;
+	z-index: 2;
 }

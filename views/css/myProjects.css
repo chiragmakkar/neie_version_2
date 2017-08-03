@@ -1,0 +1,88 @@
+#myProMain {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(66, 82, 110, 1);
+	font-size: 18px;
+}
+
+/*my Pro Main Container*/
+
+.myProMainContainer {
+	display: inline-block;
+	width: 100%;
+/*	height: 300px;*/
+	/*	border: 1px solid rgba(0, 0, 0, 0.2);*/
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+
+/*myPro Left Div*/
+
+#myProLeft {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 250px;
+	height: 100%;
+	background-color: rgba(244, 245, 247, 1);
+}
+
+/*myPro Right Div*/
+
+#myProRight {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 255px;
+	width: calc(100% - 250px);
+	height: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	padding: 12px 8px;
+}
+
+/*Left Ul*/
+
+#myProLeftBarList ul {
+	padding: 8px 12px;
+}
+#myProLeftBarList ul li {
+	list-style-type: none;
+	height: 100%;
+	width: 100%;
+	padding: 8px 12px;
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#myProLeftBarList ul li:hover {
+	background-color: rgba(9, 30, 66, 0.14);
+}
+#myProLeftBarList a {
+	text-decoration: none !important;
+	color: rgba(66, 82, 110, 1);
+	cursor: pointer;
+}
+.myProListItem {
+	text-align: left;
+	padding: 0px 12px;
+}
+.myProListItemIcon {
+	display: inline-block;
+	height: 30px;
+	width: 20px;
+	text-align: left;
+	font-size: 18px;
+}
+.myProListItemFont {
+	display: inline-block;
+	height: 30px;
+	width: 120px;
+	text-align: left;
+	font-size: 16px;
+}

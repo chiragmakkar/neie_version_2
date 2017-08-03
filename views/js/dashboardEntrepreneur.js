@@ -13,6 +13,27 @@ app.config(function ($routeProvider) {
 	$routeProvider.when('/postProject', {
 		templateUrl: "views/postProject.html"
 	});
+	//Live Expert
+	$routeProvider.when('/liveExpert', {
+		templateUrl: "views/liveExpert.html"
+	});
+	//Raise a query
+	$routeProvider.when('/raiseAQuery', {
+		templateUrl: "views/raiseAQuery.html"
+	});
+	//Find Intern
+	$routeProvider.when('/findIntern', {
+		templateUrl: "views/findIntern.html"
+	});
+	//My Projects
+	$routeProvider.when('/myProjects', {
+		templateUrl: "views/myProjects.html"
+	});
+	//Home Page
+	$routeProvider.when('/homePage', {
+		templateUrl: "views/homePage.html",
+		controller: 'HomePageCtrl'
+	});
 	//Profile Page
 	$routeProvider.when('/profile', {
 		templateUrl: "views/profileEntrepreneur.html",
@@ -55,8 +76,10 @@ app.controller('ProfileCtrl', function ($location, $scope) {
 		$scope.userSettingsOptions = 'account';
 	};
 });
-app.controller('SignupCtrl', function ($scope) {
-	$scope.signup_entre = function () {
-		$scope.signup_options = 'signup_entre_view';
+//Controller for Home Page
+app.controller('HomePageCtrl', function ($location, $scope) {
+	//Temporary Back Button Function
+	$scope.tempDashBack = function () {
+		$location.path('/blank');
 	}
 });
