@@ -1,0 +1,280 @@
+<div id="profileEntreMain">
+	<!--	Left Bar-->
+	<div id="profileEntreLeftBar" class="container-fluid">
+		<!--		Back button-->
+		<button type="button" class="btn btn-default btn-md btn-back" ng-click="bodyClick();"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+		<!--		User Photo and Name-->
+		<div id="profileEntreUserInfo">
+			<div id="profileEntreUserImage">
+			</div>
+			<div id="profileEntreUserName">
+				<p>Piet Raman</p>
+			</div>
+		</div>
+		<!--		Options-->
+		<div id="profileEntreLeftBarList">
+			<ul>
+				<a>
+					<li>
+						<div class="list-item">
+							<div class="list-item-icon">
+								<i class="fa fa-id-card-o" aria-hidden="true"></i>
+							</div>
+							<div class="list-item-font">Overview</div>
+						</div>
+					</li>
+				</a>
+				<a>
+					<li>
+						<div class="list-item" ng-click="userSettings();">
+							<div class="list-item-icon">
+								<i class="fa fa-cogs" aria-hidden="true"></i>
+							</div>
+							<div class="list-item-font">Settings</div>
+						</div>
+					</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+
+	<!--	Right Bar-->
+	<div id="profileEntreRightBar">
+		<!--		User Settings-->
+		<div class="user-settings container-fluid" ng-switch on="userProfileOptions">
+			<!--			UserSettingsDiv-->
+			<div id="userSettingsDiv" ng-switch-when="settings" ng-switch on="userSettingsOptions">
+				<!--				User Settings Tabs-->
+				<br>
+				<ul class="nav nav-tabs">
+					<li role="presentation" ng-click="profileSettings();"><a>Profile Settings</a></li>
+					<li role="presentation" ng-click="accountSettings();"><a>Account Settings</a></li>
+				</ul>
+			</div>
+			<!--			User settings div ends -->
+			<div ng-switch on="userSettingsOptions">
+				<!--				Profile Settings-->
+				<div ng-switch-when="profile">
+					<div>
+						<br>
+						<form name="intrProfile" novalidate class="form-horizontal form-group">
+							<h2>Personal Details</h2>
+							<hr>
+							<br>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-1">
+									<div class="row">
+										<label class="col-md-3 control-label">First Name</label>
+										<div class="col-md-8">
+											<input name="intrProfileFname" class="form-control" type="text" placeholder="John">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="row">
+										<label class="col-md-3 control-label">Last Name</label>
+										<div class="col-md-8">
+											<input name="intrProfileLname" class="form-control" type="text" placeholder="Smith">
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Father's Name</label>
+								<div class="col-md-4">
+									<input name="intrProfileFather" class="form-control" type="text" placeholder="Denial Luis">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Mobile</label>
+								<div class="col-md-4">
+									<input name="intrProfilePhone" class="form-control" type="text" placeholder="9999999999">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Website</label>
+								<div class="col-md-4">
+									<input name="intrProfileWeb" class="form-control" type="text" placeholder="johnsmith.com">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Linked In</label>
+								<div class="col-md-4">
+									<input name="intrProfileLinkedIn" class="form-control" type="text" placeholder="johnsmith.com">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Twitter</label>
+								<div class="col-md-4">
+									<input name="intrProfileTwitter" class="form-control" type="text" placeholder="johnsmith.com">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">E-mail</label>
+								<div class="col-md-4">
+									<input name="intrProfileEmail" class="form-control" type="text" placeholder="johnsmith@gmail.com">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Address</label>
+								<div class="col-md-7">
+									<input name="intrProfileAdd" class="form-control" type="text" placeholder="51st Street, Park Avenue, C.A.">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Introduction</label>
+								<div class="col-md-7">
+									<input name="intrProfileIntro" class="form-control" type="text" placeholder="Tell something about yourself">
+								</div>
+							</div>
+							<br>
+							<h2>Experience</h2>
+							<hr>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Organization</label>
+								<div class="col-md-4">
+									<input name="intrProfileExpOrg" class="form-control" type="text" placeholder="JohnSmith Inc.">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">From Month</label>
+								<div class="col-md-4">
+									<input name="intrProfileExpFrmMnth" class="form-control" type="text" placeholder="January">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">From Year</label>
+								<div class="col-md-4">
+									<input name="intrProfileExpFrmYr" class="form-control" type="text" placeholder="2000">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">To Month</label>
+								<div class="col-md-4">
+									<input name="intrProfileExpToMnth" class="form-control" type="text" placeholder="December">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">To Year</label>
+								<div class="col-md-4">
+									<input name="intrProfileExpToYr" class="form-control" type="text" placeholder="2016">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Profile</label>
+								<div class="col-md-4">
+									<input name="intrProfileExpPrf" class="form-control" type="text" placeholder="Profile">
+								</div>
+							</div>
+							<br>
+							<h2>Education</h2>
+							<hr>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">University/School</label>
+								<div class="col-md-4">
+									<input name="intrProfileEduUniSchName" class="form-control" type="text" placeholder="Oxford University">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">Course</label>
+								<div class="col-md-4">
+									<input name="intrProfileEduCourse" class="form-control" type="text" placeholder="Computer Science">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">From Month</label>
+								<div class="col-md-4">
+									<input name="intrProfileEduFrmMnth" class="form-control" type="text" placeholder="August">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">From Year</label>
+								<div class="col-md-4">
+									<input name="intrProfileEduFrmYr" class="form-control" type="text" placeholder="2000">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">To Month</label>
+								<div class="col-md-4">
+									<input name="intrProfileEduToMnth" class="form-control" type="text" placeholder="December">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-2 control-label">To Year</label>
+								<div class="col-md-4">
+									<input name="intrProfileEduToYr" class="form-control" type="text" placeholder="2016">
+								</div>
+							</div>
+							<br>
+						</form>
+					</div>
+				</div>
+				<!--				Profile settings ends-->
+
+				<!--				Account Settings-->
+				<div ng-switch-when="account">
+					<div id="account-settings-view">
+						<br>
+						<h2>Change Passcode</h2>
+						<hr>
+						<br>
+						<form novalidate class="form-horizontal">
+							<div class="form-group">
+								<label class="col-md-2 col-md-offset-1 control-label">Old Passcode</label>
+								<div class="col-md-4">
+									<!--								Name to be given-->
+									<input class="form-control" type="password" placeholder="Old Passcode">
+								</div>
+							</div>
+							<br>
+							<div class="form-group">
+								<label class="col-md-2 col-md-offset-1 control-label">New Passcode</label>
+								<div class="col-md-4">
+									<!--								Name to be given-->
+									<input class="form-control" type="password" placeholder="New Passcode">
+								</div>
+							</div>
+							<br>
+							<div class="form-group">
+								<label class="col-md-2 col-md-offset-1 control-label">Confirm Passcode</label>
+								<div class="col-md-4">
+									<!--								Name to be given-->
+									<input class="form-control" type="password" placeholder="Confirm Passcode">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2 col-md-offset-4">
+									<button class="btn btn-block btn-primary" type="button">Change Password</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!--				account settings ends-->
+			</div>
+		</div>
+		<!--		User settings ends-->
+	</div>
+	<!--	Right bar ends-->
+</div>
